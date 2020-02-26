@@ -1,4 +1,4 @@
-const books = require('./books.json')
+import books from './books.json'
   
 const resolvers = {
     Query: {
