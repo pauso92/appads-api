@@ -7,6 +7,7 @@ const typeDefs = gql`
   }
   type Query{
     books:[Book]
+    login(email:String, password: String): String
   }
 `
 module.exports = typeDefs;

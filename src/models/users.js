@@ -1,5 +1,3 @@
-import { Sequelize } from "sequelize/types";
-
 export default (sequelize, DataTypes) => sequelize.define('users', {
     id: {
         type: DataTypes.INTEGER,
@@ -10,5 +8,5 @@ export default (sequelize, DataTypes) => sequelize.define('users', {
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     createdAt: DataTypes.DATE,
-    updateAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE,
 })
