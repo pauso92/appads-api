@@ -3,8 +3,9 @@ import { compare } from 'bcrypt';
 import { sign } from 'jsonwebtoken';
 
 class AuthAPI extends DataSource {
+
   constructor({ store }) {
-    super();
+    super()
     this.store = store
   }
   initialize(config) {
@@ -15,10 +16,10 @@ class AuthAPI extends DataSource {
     const user = await this.store.Users.findOne({
       where: { email }
     })
-    if (user && (email === user.email && await compare(password, user.password))){
+    if (user && (email === user.email && await compare(password, user.password))) {
       const tokenData = {
-        email, 
-        roles: ['admin', 'copywriter'] // TODO: read from database
+        email,
+        roles: ['admin', 'copywriter'] //TODO: read from database
       }
       return sign(tokenData, process.env.JWT_SECRET)
     }
