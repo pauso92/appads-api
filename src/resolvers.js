@@ -1,8 +1,12 @@
 import books from './books.json'
+
   
 const resolvers = {
     Query: {
-      books: () => books
+      books: () => books,
+      login: async(_, {email,password}, {dataSources})=>{
+        await dataSources.authapi.getToken({email, password})
+      }
     }
   }
   
