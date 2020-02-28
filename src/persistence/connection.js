@@ -7,5 +7,5 @@ export default () => {
   })
   const Users = sequelize.import('../models/users')
 
-  return {Users}
+  return { Users }
 }
