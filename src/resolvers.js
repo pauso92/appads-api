@@ -4,7 +4,10 @@ const resolvers = {
   Query: {
     books: () => books,
     login: async (_, { email, password }, { dataSources }) =>
-      await dataSources.authapi.getToken({ email, password })
+      await dataSources.authAPI.getToken({ email, password }),
+    getPosts: async (_, __, { dataSources, token }) =>
+      await dataSources.authAPI.verifyToken(token)
+      && dataSources.postAPI.getAllPost(),
   }
 }
 
