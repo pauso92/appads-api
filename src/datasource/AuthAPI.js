@@ -22,7 +22,7 @@ export default class AuthAPI extends DataSource {
         email,
         roles: ['admin', 'copywriter'] //TODO: read from database
       }
-      return sign(tokenData, process.env.JWT_SECRET)
+      return sign(tokenData, process.env.JWT_SECRET, { expiresIn: '1h' })
     }
     throw new AuthenticationError('Credenciales inválidas')
   }
