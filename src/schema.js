@@ -11,9 +11,9 @@ const typeDefs = gql`
     signup(name: String, email: String, password: String): User
   }
   type User {
-    id: ID!
-    name: String!
-    email: String!
+    id: ID
+    name:String
+    email:String
   }
   type Book {
     title: String
