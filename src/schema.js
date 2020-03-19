@@ -7,6 +7,14 @@ const typeDefs = gql`
     login(email:String, password: String): String
     getPosts: [Post]
   }
+  type Mutation {
+    signup(name: String, email: String, password: String): User
+  }
+  type User {
+    id: ID!
+    name: String!
+    email: String!
+  }
   type Book {
     title: String
     author: String
