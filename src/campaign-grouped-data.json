@@ -1,0 +1,23 @@
+[
+  {
+    "campaign_name": "campaña1",
+    "adset": {
+      "name": "Adset1",
+      "Ad": {
+        "img": "https://img.icons8.com/carbon-copy/344/image.png",
+        "day": "2018-02-07",
+        "reports_end": "2018-02-07",
+        "ad_name": "adidas_Originals_BURST1_SS18_Mexico",
+        "reach": 1293490,
+        "impressions": 1313911,
+        "cost_per_results": 0.60593365982634,
+        "amount_spent": "80669.16",
+        "finish": "2018-02-07",
+        "plays": "133132",
+        "vcr": 31.25,
+        "vtr": 10.13,
+        "er": 10.60
+      }
+    }
+  }
+]

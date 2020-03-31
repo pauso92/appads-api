@@ -1,6 +1,7 @@
 import books from './books.json'
 import charts from './chartdata.json'
 import campaingdata from './campaign-data.json'
+import campaignGroupedData from './campaign-grouped-data.json'
 
 const resolvers = {
   Query: {
@@ -9,7 +10,7 @@ const resolvers = {
       && books,
     getChartData: () => charts,
     getCampaignSummary: () => campaingdata,
-
+    getCampaign: ()=> campaignGroupedData,
     login: async (_, { email, password }, { dataSources }) =>
       await dataSources.authAPI.getToken({ email, password }),
 
