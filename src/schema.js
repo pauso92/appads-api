@@ -25,12 +25,15 @@ const typeDefs = gql`
     comment: String
   }
   type CampaignSummary {
+    img: String,
     day: String,
     reports_end: String,
     campaing_name: String
+    adset_name: String
+    ad_name: String
     reach: String
-    impress: String
-    cost_by_results: String
+    impressions: String
+    cost_per_results: String
     amount_spent: String
     finish: String
     plays: String
