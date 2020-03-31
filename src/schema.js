@@ -4,6 +4,7 @@ const typeDefs = gql`
   type Query {
     books:[Book]
     getChartData: [ChartJs]
+    getCampaignSummary: [CampaignSummary]
     login(email:String, password: String): String
     getPosts: [Post]
   }
@@ -22,6 +23,20 @@ const typeDefs = gql`
   type Post {
     author: String
     comment: String
+  }
+  type CampaignSummary {
+    day: String,
+    reports_end: String,
+    campaing_name: String
+    reach: String
+    impress: String
+    cost_by_results: String
+    amount_spent: String
+    finish: String
+    plays: String
+    vcr: String
+    vtr: String
+    er: String
   }
   type ChartJs {
     type: String,

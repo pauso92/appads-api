@@ -1,9 +1,9 @@
 import { DataSource } from "apollo-datasource";
 import { hash } from "bcrypt";
 
-export default class UserAPI extends DataSource {
+const saltRounds = 10
 
-  saltRounds = 10
+export default class UserAPI extends DataSource {
 
   constructor({ store }) {
     super()
@@ -17,7 +17,7 @@ export default class UserAPI extends DataSource {
     const result = await this.store.Users.create({
       name,
       email,
-      password: await hash(password, this.saltRounds)
+      password: await hash(password, saltRounds)
     })
     return result
   }
