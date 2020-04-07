@@ -42,10 +42,12 @@ const typeDefs = gql`
     reports_end: String
     reach: String
     impressions: String
+    interactions: String
     cost_per_results: String
     amount_spent: String
     finish: String
     plays: String
+    plays3sg: String
     vcr: String
     vtr: String
     er: String
@@ -53,18 +55,18 @@ const typeDefs = gql`
 
 
   type CampaignSummary {
+    name: String
     img: String
     day: String
     reports_end: String
-    campaing_name: String
-    adset_name: String
-    ad_name: String
     reach: String
     impressions: String
     cost_per_results: String
     amount_spent: String
+    interactions: String
     finish: String
     plays: String
+    plays3sg: String
     vcr: String
     vtr: String
     er: String
